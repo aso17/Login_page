@@ -2,7 +2,7 @@
 require_once 'vendor/autoload.php';
 $clientID = "692956272863-pfp0v7irs9ual5fe40kvj9f2titdbj4u.apps.googleusercontent.com";
 $clientSecret = "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";
-$redirectUrl = "http://localhost/login_Page/login.php";
+$redirectUrl = "http://localhost/login_Page/index.php";
 $client = new Google_Client();
 $client->setclientID($clientID);
 $client->setclientSecret($clientSecret);
@@ -21,7 +21,7 @@ if (isset($_GET['code'])) {
   $_SESSION['nama'] = $google_info->name;
   header('Location: http://localhost/login_page/home.php');
 } else {
-  header("http://localhost/login_page/login.php");
+  header("http://localhost/login_Page/index.php");
 }
 ?>
 <!DOCTYPE html>
